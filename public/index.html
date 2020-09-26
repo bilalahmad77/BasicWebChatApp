@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Chat App By Bilal Ahmad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyCLRJ4PP3mbjKU_NreXSioUpmFDjBiOQOc",
+          authDomain: "basicchatapp-58e3b.firebaseapp.com",
+          databaseURL: "https://basicchatapp-58e3b.firebaseio.com",
+          projectId: "basicchatapp-58e3b",
+          storageBucket: "basicchatapp-58e3b.appspot.com",
+          messagingSenderId: "1081348818562",
+          appId: "1:1081348818562:web:43e78a6f487cee5c3b569b",
+          measurementId: "G-NNVF794DD9"
+        };
+        firebase.initializeApp(firebaseConfig);
+      </script>
+</head>
+<body>
+
+  <nav class="text-white bg-dark p-2   text-center">
+    <h2>Welcome! To My Web Chat App</h2>
+  </nav>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-4 col-xs-12 col-sm-12">
+      <div id ="profile-pic"></div>
+     <div id = "display-name"></div>
+        <button id= "sign-in" onclick="facebook_login()" class="btn btn-primary btn-block ml-1">Facebook Login</button>
+        <button id= "Logout" onclick="logout()" class="btn btn-danger btn-block mb-2 ml-1">Logout</button>
+        <textarea name="" id="msg" cols="48" rows="10" class="ml-1 mt-1" ></textarea>
+        <br>
+        <button class="btn btn-success  btn-block ml-1" id="send" >Send</button>
+      </div>
+
+        <div id="msgs" class="col-md-8 col-xs-12 col-sm-12 border border-primary mt-1">
+        </div>
+
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
